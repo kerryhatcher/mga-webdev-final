@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    {% include "head.njk" %}
+
+
+
+</head>
+<body>
+
+{% include "nav.njk" %}
+
+    <div id="main" class="container">
+        <div class="row">
+            <div class="col-md-12">
+                {% block main %} {% endblock %}
+            </div>
+        </div>
+    </div>
+
+{% include "footer.njk" %}
+
+
+
+
+
+</body>
+</html>

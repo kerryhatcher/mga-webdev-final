@@ -1,0 +1,18 @@
+{% extends "base.njk" %}
+
+{% block main %}
+
+<h1>Welcome</h1>
+
+
+<div id="calendar"></div>
+
+<script type="text/javascript">
+    var calendar = $('#calendar').calendar({
+        events_source: '/cal.json',
+        tmpl_path: "/cal/"
+    });
+</script>
+
+
+{% endblock %}

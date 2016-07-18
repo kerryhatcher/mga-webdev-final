@@ -1,0 +1,31 @@
+{% extends "base.njk" %}
+
+{% block main %}
+
+<h1>Welcome</h1>
+
+
+{% include "missions.njk" %}
+
+
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#example').DataTable();
+        filterColumnRgEx("^((?!Going|Full|Past).)*$");
+
+    } );
+
+
+
+    function filterColumnRgEx (regex) {
+        console.log(status);
+        $('#example').DataTable().column(6).search(regex, true).draw();
+    }
+</script>
+
+<!--^((?!Going).)*$-->
+
+
+{% endblock %}
