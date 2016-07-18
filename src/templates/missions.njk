@@ -1,92 +1,200 @@
 <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
     <thead>
-    <tr>
-        <th>SAD</th>
-        <th>Name</th>
-        <th>Location</th>
-        <th>Start date</th>
-        <th>End date</th>
-        <th>Min DL</th>
-        <th>Status</th>
-        <th>Staff</th>
-        <th>Needed</th>
-        <th>Max</th>
-    </tr>
+        <tr>
+            <th>Action</th>
+            <th>SAD</th>
+            <th>Name</th>
+            <th>Location</th>
+            <th>Start date</th>
+            <th>End date</th>
+            <th>Min DL</th>
+            <th>Staff</th>
+            <th>Needed</th>
+            <th>Max</th>
+            <th>Actual</th>
+            <th>On Roster</th>
+            <th>Attended</th>
+            <th>Type</th>
+        </tr>
     </thead>
     <tfoot>
-    <tr>
-        <th>SAD</th>
-        <th>Name</th>
-        <th>Location</th>
-        <th>Start date</th>
-        <th>End date</th>
-        <th>Min DL</th>
-        <th>Status</th>
-        <th>Staff</th>
-        <th>Needed</th>
-        <th>Max</th>
-    </tr>
+        <tr>
+            <th>Action</th>
+            <th>SAD</th>
+            <th>Name</th>
+            <th>Location</th>
+            <th>Start date</th>
+            <th>End date</th>
+            <th>Min DL</th>
+            <th>Staff</th>
+            <th>Needed</th>
+            <th>Max</th>
+            <th>Actual</th>
+            <th>On Roster</th>
+            <th>Attended</th>
+            <th>Type</th>
+        </tr>
     </tfoot>
     <tbody>
-    <tr>
-        <td>SAD 123 456</td>
-        <td>Hurry up an wait</td>
-        <td>Blood Mtn</td>
-        <td>27JUL2016</td>
-        <td>27JUL2016</td>
-        <td>4</td>
-        <td><button type="button" class="btn btn-success">Going</button></td>
-        <td>12</td>
-        <td>10</td>
-        <td>999</td>
-    </tr>
-    <tr>
-        <td>SAD 234 567</td>
-        <td>Hot n Sunny</td>
-        <td>Ft. Stewart Swamps</td>
-        <td>27AUG2016</td>
-        <td>27AUG2016</td>
-        <td>1</td>
-        <td><button type="button" class="btn btn-danger">Sign Up</button></td>
-        <td>12</td>
-        <td>25</td>
-        <td>55</td>
-    </tr>
-    <tr>
-        <td>SAD 345 678</td>
-        <td>Look for dude</td>
-        <td>Macon, GA</td>
-        <td>01AUG2016</td>
-        <td>01AUG2016</td>
-        <td>2</td>
-        <td><button type="button" class="btn btn-primary">Staffed</button></td>
-        <td>25</td>
-        <td>15</td>
-        <td>999</td>
-    </tr>
-    <tr>
-        <td>SAD 345 678</td>
-        <td>Look for dude</td>
-        <td>Macon, GA</td>
-        <td>01AUG2016</td>
-        <td>01AUG2016</td>
-        <td>2</td>
-        <td><button type="button" class="btn btn-default">Full</button></td>
-        <td>25</td>
-        <td>20</td>
-        <td>25</td>
-    </tr>
-    <tr>
-        <td>SAD 345 678</td>
-        <td>Look for dude</td>
-        <td>Macon, GA</td>
-        <td>01AUG2015</td>
-        <td>01AUG2015</td>
-        <td>2</td>
-        <td><button type="button" class="btn btn-default">Past</button></td>
-        <td>25</td>
-        <td>20</td>
-        <td>25</td>
-    </tr>
+        <tr>
+            <td><a href="/missions/details.html?sad=123-2456" class="btn btn-success" role="button">Going</a></td>
+            <td>123-2456</td>
+            <td>Hurry up and wait</td>
+            <td>Blood Mtn</td>
+            <td>27JUL2016</td>
+            <td>27JUL2016</td>
+            <td>4</td>
+            <td>25</td><!--staff-->
+            <td>20</td><!--needed-->
+            <td>999</td><!--max-->
+            <td>0</td><!--actual-->
+            <td>Yes</td><!--on roster-->
+            <td>No</td><!--attended-->
+            <td>M</td><!--type-->
+        </tr>
+        <tr>
+            <td><a href="/missions/signup.html" class="btn btn-danger" role="button">Sign Up</a></td>
+            <td>SAD 234 567</td>
+            <td>Hot n Sunny</td>
+            <td>Ft. Stewart Swamps</td>
+            <td>27AUG2016</td>
+            <td>27AUG2016</td>
+            <td>1</td>
+            <td>12</td><!--staff-->
+            <td>25</td><!--needed-->
+            <td>55</td><!--max-->
+            <td>12</td><!--actual-->
+            <td>No</td><!--on roster-->
+            <td>No</td><!--attended-->
+            <td>M</td><!--type-->
+        </tr>
+        <tr>
+            <td><a href="/missions/signup.html" class="btn btn-primary" role="button">Staffed</a></td>
+            <td>SAD 345 678</td>
+            <td>Look for dude</td>
+            <td>Macon, GA</td>
+            <td>01AUG2016</td>
+            <td>01AUG2016</td>
+            <td>2</td>
+            <td>23</td><!--staff-->
+            <td>10</td><!--needed-->
+            <td>999</td><!--max-->
+            <td>0</td><!--actual-->
+            <td>No</td><!--on roster-->
+            <td>No</td><!--attended-->
+            <td>M</td><!--type-->
+        </tr>
+        <tr>
+            <td><button type="button" class="btn btn-default">Full</button></td>
+            <td>SAD 345 678</td>
+            <td>Look for dude</td>
+            <td>Macon, GA</td>
+            <td>01AUG2016</td>
+            <td>01AUG2016</td>
+            <td>2</td>
+            <td>25</td><!--staff-->
+            <td>20</td><!--needed-->
+            <td>25</td><!--max-->
+            <td>0</td><!--actual-->
+            <td>No</td><!--on roster-->
+            <td>No</td><!--attended-->
+            <td>M</td><!--type-->
+        </tr>
+        <tr>
+            <td><button type="button" class="btn btn-default">Full</button></td>
+            <td>SAD 543 876</td>
+            <td>Look for dude</td>
+            <td>War Town, GA</td>
+            <td>19NOV2016</td>
+            <td>19NOV2016</td>
+            <td>2</td>
+            <td>25</td><!--staff-->
+            <td>20</td><!--needed-->
+            <td>25</td><!--max-->
+            <td>0</td><!--actual-->
+            <td>Yes</td><!--on roster-->
+            <td>No</td><!--attended-->
+            <td>M</td><!--type-->
+        </tr>
+        <tr>
+            <td><button type="button" class="btn btn-default">Past</button></td>
+            <td>SAD 345 678</td>
+            <td>Look for dude</td>
+            <td>Macon, GA</td>
+            <td>01AUG2015</td>
+            <td>01AUG2015</td>
+            <td>2</td>
+            <td>25</td><!--staff-->
+            <td>20</td><!--needed-->
+            <td>998</td><!--max-->
+            <td>23</td><!--actual-->
+            <td>No</td><!--on roster-->
+            <td>No</td><!--attended-->
+            <td>M</td><!--type-->
+        </tr>
+        <tr class="danger">
+            <td><button type="button" class="btn btn-default">Past</button></td>
+            <td>SAD 789 012</td>
+            <td>Protect Event</td>
+            <td>Macon, GA</td>
+            <td>01MAY2015</td>
+            <td>01MAY2015</td>
+            <td>3</td>
+            <td>25</td><!--staff-->
+            <td>20</td><!--needed-->
+            <td>25</td><!--max-->
+            <td>24</td><!--actual-->
+            <td>Yes</td><!--on roster-->
+            <td>No</td><!--attended-->
+            <td>M</td><!--type-->
+        </tr>
+        <tr class="success">
+            <td><button type="button" class="btn btn-default">Past</button></td>
+            <td>SAD 852 147</td>
+            <td>Drill</td>
+            <td>Macon, GA</td>
+            <td>07MAY2016</td>
+            <td>08MAY2016</td>
+            <td>4</td><!--DL-->
+            <td>25</td><!--staff-->
+            <td>1</td><!--needed-->
+            <td>999</td><!--max-->
+            <td>22</td><!--actual-->
+            <td>Yes</td><!--on roster-->
+            <td>Yes</td><!--attended-->
+            <td>D</td><!--type-->
+        </tr>
+        <tr class="warning">
+            <td><button type="button" class="btn btn-default">Past</button></td>
+            <td>SAD 852 147</td>
+            <td>Drill</td>
+            <td>Macon, GA</td>
+            <td>06FEB2016</td>
+            <td>07FEB2016</td>
+            <td>4</td><!--DL-->
+            <td>25</td><!--staff-->
+            <td>1</td><!--needed-->
+            <td>999</td><!--max-->
+            <td>22</td><!--actual-->
+            <td>No</td><!--on roster-->
+            <td>Yes</td><!--attended-->
+            <td>D</td><!--type-->
+        </tr>
+        <tr class="success">
+            <td><button type="button" class="btn btn-default">Past</button></td>
+            <td><a href="/files/SAD_271-13057.pdf">271-13057</a></td>
+            <td>SAR Mission Jenkins County</td>
+            <td>Jenkins County, GA</td>
+            <td>28SEP2013</td>
+            <td>28SEP2013</td>
+            <td>1</td><!--DL-->
+            <td>30</td><!--staff-->
+            <td>1</td><!--needed-->
+            <td>999</td><!--max-->
+            <td>29</td><!--actual-->
+            <td>YES</td><!--on roster-->
+            <td>Yes</td><!--attended-->
+            <td>M</td><!--type-->
+        </tr>
     </tbody>
 </table>

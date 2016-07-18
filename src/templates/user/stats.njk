@@ -1,0 +1,17 @@
+<div class="panel-group">
+    <div class="panel panel-default">
+        <div class="panel-heading">Drill Stats <span class="badge">4 Years*</span></div>
+        <div class="panel-body">{% include "user/drill-stats.njk" %}</div>
+        <div class="panel-footer">Drill Stats *Credit Years (1 AT, 10+ drills, no AWOL)</div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">Mission Stats <span class="badge">67 credits*</span></div>
+        <div class="panel-body">{% include "user/mission-stats.njk" %}</div>
+        <div class="panel-footer">*Mission credits: Some missions credit each day separate, some missions may be counted as drill</div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading"><a data-toggle="collapse" href="#collapse1">Awards</a></div>
+        <div id="collapse1" class="panel-collapse collapse">{% include "user/award-stats.njk" %}</div>
+    </div>
+</div>
+

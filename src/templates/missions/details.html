@@ -1,0 +1,26 @@
+{% extends "base.njk" %}
+
+{% block main %}
+
+<h1>SAD 123-2456</h1>
+<h2>Hurry up and wait</h2>
+
+<div class="row">
+    {% include "missions/perstat.njk" %}
+</div>
+
+<div class="row" id="mission_actions">
+    <div class="panel panel-primary col-md-offset-2 col-lg-offset-2 col-md-2 col-lg-2">
+        <div class="panel-heading"><a class="btn btn-success btn-lg btn-block" role="button" data-toggle="collapse" href="#collapse1">Check In</a></div>
+        <div id="collapse1" class="panel-collapse collapse"><button type="button" class="btn btn-danger  btn-lg btn-block">Check In</button></div>
+        <div class="panel-footer">Sign roster</div>
+    </div>
+    <div class="panel panel-primary col-md-offset-4 col-lg-offset-4 col-md-2 col-lg-2">
+        <div class="panel-heading"><a class="btn btn-success btn-lg btn-block" role="button" data-toggle="collapse" href="#collapse2">Check Out</a></div>
+        <div id="collapse2" class="panel-collapse collapse"><button type="button" class="btn btn-danger  btn-lg btn-block">Check Out</button></div>
+        <div class="panel-footer">End Mission</div>
+    </div>
+</div>
+
+
+{% endblock %}

@@ -8,16 +8,19 @@
 {% include "missions.njk" %}
 
 
+
+
 <script type="text/javascript">
     $(document).ready(function() {
         $('#example').DataTable();
-        filterColumnRgEx("^((?!Going|Full|Past).)*$");
+        filterColumn("Going");
 
     } );
 
+
 </script>
 
-<!--^((?!Going).)*$-->
+
 
 
 {% endblock %}
