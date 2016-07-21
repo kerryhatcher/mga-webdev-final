@@ -1,3 +1,6 @@
+.idea
+
+
 # Created by .ignore support plugin (hsz.mobi)
 ### Linux template
 *~
@@ -141,3 +144,5 @@ jspm_packages
 
 /dist/
 /bower_components/
+/public/lib/
+/public/

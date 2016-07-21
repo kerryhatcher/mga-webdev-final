@@ -1,7 +1,6 @@
-function filterPast(){
-    filterColumn("Past");
+function filterPast() {
+    filterColumn('Past');
 }
-
 
 function filterColumn (status) {
     $('#example').DataTable().column(0).search(status).draw();
