@@ -2,4 +2,4 @@
 
 To start dev server:
 
-npm run
+gulp browser
