@@ -47,7 +47,7 @@ gulp.task('inject', ['compile'], function() {
     var wiredep = require('wiredep').stream;
     var inject = require('gulp-inject');
 
-    var injectSrc = gulp.src(['./public/css/*.css', './public/js/*.js'], {read: false});
+    var injectSrc = gulp.src(['./public/css/*.css', './public/kjs/*.js'], {read: false});
 
     var injectOptions = {
         ignorePath: '/public/'
@@ -62,7 +62,7 @@ gulp.task('inject', ['compile'], function() {
     return gulp.src('./public/**/*.html')
         .pipe(wiredep(options))
         .pipe(inject(injectSrc, injectOptions))
-        .pipe(gulp.dest('./public/'));
+        .pipe(gulp.dest('./public//'));
 });
 
 gulp.task('style', function () {
@@ -219,7 +219,7 @@ gulp.task('cname', function () {
 // =======================================================================
 gulp.task('connect', ['inject'], function () {
     connect.server({
-        root: compiledcode,
+        root: 'public',
         port: 4000,
         livereload: true
     });

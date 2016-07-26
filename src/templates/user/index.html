@@ -15,7 +15,7 @@
         </div>
         <div class="panel-body">
             <div class="row">
-                <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="https://robohash.org/PVT-JOE-NOBODY" class="img-circle img-responsive"> </div>
+                <div class="col-md-3 col-lg-3 " > <img alt="User Pic" src="https://robohash.org/PVT-JOE-NOBODY" class="img-circle img-responsive"> </div>
                 <div class=" col-md-9 col-lg-9 ">
                     <table class="table table-user-information">
                         <tbody>
@@ -40,7 +40,6 @@
                             <td>Active</td>
                         </tr>
                         <tr>
-                        <tr>
                             <td>Gender</td>
                             <td>Male</td>
                         </tr>
@@ -52,6 +51,7 @@
                             <td>Email</td>
                             <td><a href="mailto:joe.nobody@gasdf.us">joe.nobody@gasdf.us</a></td>
                         </tr>
+                        <tr>
                         <td>Phone Number</td>
                         <td>478-555-1234(Landline)<br><br>478-555-1234(Mobile)</td>
 
@@ -61,6 +61,38 @@
                         </tbody>
                     </table>
 
+                    <canvas id="myChart" ></canvas>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.js"></script>
+                    <script>
+                        var ctx = document.getElementById("myChart");
+                        var myChart = new Chart(ctx, {
+                            type: 'line',
+                            data: {
+                                labels: ["2011", "2012", "2013", "2014", "2015", "2016"],
+                                datasets: [{
+                                    label: 'Points per year',
+                                    data: [12, 19, 3, 8, 2, 3],
+                                    backgroundColor: [
+                                        'rgba(200, 99, 132, 0.2)'
+                                    ],
+                                    borderColor: [
+                                        'rgba(200,99,132,1)'
+                                    ],
+                                    borderWidth: 1
+                                }]
+                            },
+                            options: {
+                                scales: {
+                                    yAxes: [{
+                                        ticks: {
+                                            beginAtZero:true
+                                        }
+                                    }]
+                                }
+                            }
+                        });
+                    </script>
+
                     {% include "user/stats.njk" %}
 
                     <a href="/missions/past.html" class="btn btn-primary">Mission History</a>
@@ -69,9 +101,9 @@
             </div>
         </div>
         <div class="panel-footer">
-            <a data-original-title="Broadcast Message" href="mailto:joe.nobody@gasdf.us" data-toggle="tooltip" type="button" class="btn btn-sm btn-primary"><i class="glyphicon glyphicon-envelope"></i></a>
+            <a data-original-title="Broadcast Message" href="mailto:joe.nobody@gasdf.us" data-toggle="tooltip" role="button" class="btn btn-sm btn-primary"><i class="glyphicon glyphicon-envelope"></i></a>
             <span class="pull-right">
-                    <a href="edit.html" data-original-title="Edit this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-warning"><i class="glyphicon glyphicon-edit"></i></a>
+                    <a href="edit.html" data-original-title="Edit this user" data-toggle="tooltip" role="button" class="btn btn-sm btn-warning"><i class="glyphicon glyphicon-edit"></i></a>
             </span>
         </div>
 
